@@ -39,6 +39,13 @@
             resize: vertical;
             width: 96.5%; 
         }
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .button-group button {
+            flex: 1;
+        }
     </style>
 </head>
 <body>
@@ -51,7 +58,10 @@
         <p id="taskDescription"></p>
         <ul id="taskPoints"></ul>
         <textarea id="emailText" rows="10" placeholder="Write your email here..."></textarea>
-        <button onclick="saveTextFile()">Save as .txt</button>
+        <div class="button-group">
+            <button onclick="saveTextFile()">Save as .txt</button>
+            <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        </div>
     </div>
     
     <script>
@@ -76,11 +86,13 @@
             document.getElementById("taskDescription").textContent = task.description;
             let pointsList = document.getElementById("taskPoints");
             pointsList.innerHTML = "";
-            task.points.forEach(point => {
-                let li = document.createElement("li");
-                li.textContent = point;
-                pointsList.appendChild(li);
-            });
+            if (task.points) {
+                task.points.forEach(point => {
+                    let li = document.createElement("li");
+                    li.textContent = point;
+                    pointsList.appendChild(li);
+                });
+            }
         }
 
         function pickRandomTask() {
@@ -111,6 +123,25 @@
             a.href = URL.createObjectURL(blob);
             a.download = filename;
             a.click();
+        }
+
+        function copyToClipboard() {
+            let userText = document.getElementById("emailText").value;
+            let taskTitle = document.getElementById("taskTitle").textContent;
+            let taskDescription = document.getElementById("taskDescription").textContent;
+            let taskPoints = document.getElementById("taskPoints").getElementsByTagName("li");
+
+            let taskDetails = "";
+            for (let i = 0; i < taskPoints.length; i++) {
+                taskDetails += `- ${taskPoints[i].textContent}\n`;
+            }
+
+            const formattedText = `Task: ${taskTitle}\nDetails:\n${taskDetails}\n-----------------------------------\n\n${userText}`;
+            navigator.clipboard.writeText(formattedText).then(() => {
+                alert("Text copied to clipboard!");
+            }).catch(() => {
+                alert("Failed to copy text.");
+            });
         }
         
         loadTasks();
