@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Task Selector</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: #cfcfcf;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #333;
+            color: #cfcfcf;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background: #444;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+        textarea {
+            resize: vertical;
+            width: 96.5%; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Email Task Selector</h2>
+        <label for="taskSelect">Choose a task:</label>
+        <select id="taskSelect"></select>
+        <button onclick="pickRandomTask()">Pick Random Task</button>
+        <h3 id="taskTitle"></h3>
+        <p id="taskDescription"></p>
+        <ul id="taskPoints"></ul>
+        <textarea id="emailText" rows="10" placeholder="Write your email here..."></textarea>
+        <button onclick="saveTextFile()">Save as .txt</button>
+    </div>
+    
+    <script>
+        let tasks = [];
+        
+        async function loadTasks() {
+            const response = await fetch('../tasks.json');
+            tasks = await response.json();
+            const select = document.getElementById("taskSelect");
+            tasks.forEach(task => {
+                let option = document.createElement("option");
+                option.value = task.id;
+                option.textContent = task.title;
+                select.appendChild(option);
+            });
+            displayTask(0);
+        }
+
+        function displayTask(index) {
+            const task = tasks[index];
+            document.getElementById("taskTitle").textContent = task.title;
+            document.getElementById("taskDescription").textContent = task.description;
+            let pointsList = document.getElementById("taskPoints");
+            pointsList.innerHTML = "";
+            task.points.forEach(point => {
+                let li = document.createElement("li");
+                li.textContent = point;
+                pointsList.appendChild(li);
+            });
+        }
+
+        function pickRandomTask() {
+            const randomIndex = Math.floor(Math.random() * tasks.length);
+            document.getElementById("taskSelect").selectedIndex = randomIndex;
+            displayTask(randomIndex);
+        }
+
+        document.getElementById("taskSelect").addEventListener("change", function() {
+            displayTask(this.selectedIndex);
+        });
+        
+        function saveTextFile() {
+            let userText = document.getElementById("emailText").value;
+            let taskTitle = document.getElementById("taskTitle").textContent;
+            let taskDescription = document.getElementById("taskDescription").textContent;
+            let taskPoints = document.getElementById("taskPoints").getElementsByTagName("li");
+
+            let taskDetails = "";
+            for (let i = 0; i < taskPoints.length; i++) {
+                taskDetails += `- ${taskPoints[i].textContent}\n`;
+            }
+
+            const formattedText = `Task: ${taskTitle}\nDetails:\n${taskDetails}\n-----------------------------------\n\n${userText}`;
+            let filename = new Date().toISOString().replace(/[:.]/g, "-") + "-" + taskTitle + ".txt";
+            let blob = new Blob([formattedText], { type: "text/plain" });
+            let a = document.createElement("a");
+            a.href = URL.createObjectURL(blob);
+            a.download = filename;
+            a.click();
+        }
+        
+        loadTasks();
+    </script>
+</body>
+</html>

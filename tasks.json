@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "title": "Kreditberater",
+        "description": "Berufsbezeichnung"
+    },
+    {
+        "id": 2,
+        "title": "Erste-Hilfe-Kurs",
+        "description": "Sie möchten einen Erste-Hilfe-Kurs machen. Schreiben Sie eine E-Mail an Herrn Schmidt vom Weiterbildungszentrum.",
+        "points": [
+            "Warum Sie einen Erste-Hilfe-Kurs machen möchten",
+            "Ihre Erfahrungen",
+            "Dauer und Termine des Kurses",
+            "Kosten"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Treppenhaus-Reinigung",
+        "description": "Sie wohnen in einem Mietshaus. Alle Mieter müssen das Treppenhaus putzen, aber keiner von Ihren Nachbarn macht es. Schreiben Sie Ihrem Vermieter, Herrn Lehmann, einen Brief.",
+        "points": [
+            "Grund für Ihr Schreiben",
+            "Wie Sie versucht haben, das Problem selbst zu lösen",
+            "Weitere Probleme im Haus",
+            "Was der Vermieter tun soll"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Kann die Abholung nicht übernehmen",
+        "description": "Ihre Bekannte hat am Donnerstag einen Termin und fragt, ob Sie ihre Tochter aus dem Kindergarten abholen können. Schreiben Sie eine E-Mail.",
+        "points": [
+            "Warum Sie schreiben",
+            "Warum Sie die Tochter nicht abholen können",
+            "Wer sonst helfen kann",
+            "Wie Sie anders helfen können"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Falsche Hose geliefert",
+        "description": "Sie haben online eine Hose bestellt, aber leider etwas anderes bekommen. Schreiben Sie an die Firma eine Mail.",
+        "points": [
+            "Welche Hose genau haben Sie bestellt (Farbe, Modell, Größe …)",
+            "Warum haben Sie bei dieser Firma die Hose gekauft?",
+            "Was haben Sie bekommen?",
+            "Was möchten Sie jetzt?"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Tochter im Krankenhaus",
+        "description": "Ihre Tochter ist im Krankenhaus, weil sie einen Unfall hatte. Sie kann nicht zur Schule gehen. Schreiben Sie einen Brief an die Lehrerin, Frau Meier.",
+        "points": [
+            "Grund für ihr Schreiben",
+            "Was ist passiert?",
+            "Wie lange?",
+            "Hausaufgaben?"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Antwort auf Brief eines Bekannten",
+        "description": "Antworten Sie auf den Brief eines Bekannten.",
+        "points": [
+            "Ihre Erfahrungen mit dem Computer",
+            "Etwas über Ihre Wohnung",
+            "Ob Sie Andreas besuchen möchten",
+            "Was es bei Ihnen Neues gibt"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Handy funktioniert nicht",
+        "description": "Du hast ein neues Handy online bestellt, aber es funktioniert nicht richtig. Schreibe eine Beschwerde an den Kundenservice.",
+        "points": [
+            "Wann du das Handy gekauft hast",
+            "Welches Problem es gibt",
+            "Was du als Lösung möchtest"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Vergessener Termin",
+        "description": "Du hast einen wichtigen Termin mit einem Freund oder einer Freundin vergessen. Schreibe eine E-Mail und erkläre.",
+        "points": [
+            "Warum du den Termin vergessen hast",
+            "Wie du dich fühlst",
+            "Was du vorschlägst, um es wieder gutzumachen"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Fragen zum Sprachkurs",
+        "description": "Du möchtest einen Sprachkurs besuchen, aber du hast noch Fragen. Schreibe eine E-Mail an die Sprachschule.",
+        "points": [
+            "Kurszeiten und Preise",
+            "Unterrichtsmaterial",
+            "Anmeldungsmöglichkeiten"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Einladung zum Fest",
+        "description": "In deiner Stadt gibt es ein großes Fest, und du möchtest deine Freunde einladen. Schreibe eine E-Mail und erkläre.",
+        "points": [
+            "Wann und wo das Fest ist",
+            "Was dort passiert",
+            "Warum es Spaß macht"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Freund aus dem Ausland besucht deine Stadt",
+        "description": "Ein Freund aus dem Ausland möchte deine Stadt besuchen. Schreibe eine E-Mail und erzähle ihm.",
+        "points": [
+            "Welche Sehenswürdigkeiten es gibt",
+            "Wo er gut essen kann",
+            "Welche besonderen Veranstaltungen es gibt"
+        ]
+    }
+]
