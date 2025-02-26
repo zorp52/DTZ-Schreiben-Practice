@@ -119,5 +119,71 @@
             "Wo er gut essen kann",
             "Welche besonderen Veranstaltungen es gibt"
         ]
+    },
+    {
+        "id": 13,
+        "title": "Beschwerde über Restaurantbesuch",
+        "description": "Sie waren in einem Restaurant und hatten eine schlechte Erfahrung. Schreiben Sie eine Beschwerde-E-Mail an das Restaurant.",
+        "points": [
+            "Was genau war das Problem?",
+            "Wann und wo waren Sie im Restaurant?",
+            "Was haben Sie erwartet?",
+            "Was möchten Sie jetzt vom Restaurant?"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Bewerbung für einen Job",
+        "description": "Sie bewerben sich für einen Job. Schreiben Sie eine E-Mail an das Unternehmen.",
+        "points": [
+            "Warum bewerben Sie sich für diesen Job?",
+            "Welche Qualifikationen haben Sie?",
+            "Warum möchten Sie in diesem Unternehmen arbeiten?",
+            "Wann sind Sie verfügbar für ein Vorstellungsgespräch?"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Beschwerde über öffentlichen Nahverkehr",
+        "description": "Sie hatten ein Problem mit dem Bus oder der Bahn. Schreiben Sie eine Beschwerde-E-Mail an das Verkehrsunternehmen.",
+        "points": [
+            "Was genau ist passiert?",
+            "Wann und wo ist es passiert?",
+            "Wie hat es Sie beeinflusst?",
+            "Was möchten Sie vom Unternehmen?"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Einladung zu einer Feier",
+        "description": "Sie feiern Ihren Geburtstag und möchten Freunde einladen. Schreiben Sie eine E-Mail.",
+        "points": [
+            "Wann und wo findet die Feier statt?",
+            "Was wird es geben (Essen, Musik, etc.)?",
+            "Sollen die Gäste etwas mitbringen?",
+            "Bitte um Rückmeldung bis zu einem bestimmten Datum."
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Bitte um Hilfe bei einem Umzug",
+        "description": "Sie ziehen um und brauchen Hilfe. Schreiben Sie eine E-Mail an einen Freund.",
+        "points": [
+            "Wann und wo ziehen Sie um?",
+            "Was genau brauchen Sie für Hilfe?",
+            "Können Sie etwas anbieten (Essen, Getränke, etc.)?",
+            "Bitte um Rückmeldung."
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Feedback zu einem Online-Kurs",
+        "description": "Sie haben einen Online-Kurs besucht und möchten Feedback geben. Schreiben Sie eine E-Mail an den Kursanbieter.",
+        "points": [
+            "Was hat Ihnen gut gefallen?",
+            "Was hat Ihnen nicht gefallen?",
+            "Welche Verbesserungsvorschläge haben Sie?",
+            "Würden Sie den Kurs weiterempfehlen?"
+        ]
     }
 ]
